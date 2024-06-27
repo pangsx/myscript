@@ -1,0 +1,7 @@
+40 13 * * * sh /tmp/mnt/1110809/script/stock_reward.sh
+10 20 1 * * sh /tmp/mnt/1110809/script/stock/stock.sh
+10 21 1 * * sh /tmp/mnt/1110809/script/stockp/Performance.sh
+10 14 * * Sun sh /tmp/mnt/1110809/script/reward/main.sh
+10 23 * * * sh /tmp/mnt/1110809/script/killfile.sh
+30 13 * * * sh /tmp/mnt/1110809/script/linep.sh "i_am_living"
+
