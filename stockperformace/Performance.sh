@@ -5,7 +5,9 @@
 #1140417更新一下由網上下載資料
 rm my.txtc mydividend.txtc
 wget -q --no-check-certificate "https://drive.google.com/u/0/uc?id=1Kve1iGaj1vevzgZD9QQzDMMjQ7UbbXxm&export=download" -O "mydividend.txtc"
-cat mydividend.txtc | grep -v \#| cut -d "," -f 1|sort |uniq > my.txtc
+#1140628有些剛買的股票沒有發股息，就不會算積效，所以改良一下
+wget -q --no-check-certificate "https://drive.usercontent.google.com/u/0/uc?id=1GuoLxkyI6iJaISSAG68c-zUNipukWkZj&export=download" -O "mystock.txtc"
+cat mydividend.txtc mystock.txtc| grep -v \#| cut -d "," -f 1|sort |uniq > my.txtc
 
 
 
